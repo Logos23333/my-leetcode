@@ -14,8 +14,8 @@ class Solution:
         copy = x
         revert = 0
         while copy > 0:
-            revert = revert*10+copy/10
-            copy /= 10
+            revert = revert*10+copy % 10
+            copy //= 10
 
         print(revert)
         return revert == x
